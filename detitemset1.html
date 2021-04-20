@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang='en' ng-app=''>
+
+<head>
+
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Item</title>
+    <style>
+        #container {
+            width: 120%;
+            background-color: blueviolet;
+            height: 40px;
+        }
+
+        #div1 {
+            float: left;
+            width: auto;
+            height: auto;
+            margin-right: 10px;
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+
+        #div1:hover {
+            box-shadow: 0 8px 16px rgba(177, 174, 196, 0.8), 0 6px 5px rgb(184, 176, 206);
+            margin-left: 21px;
+        }
+
+        #div1:hover(#btn) {
+            display: none;
+        }
+
+        #div2:hover {
+            box-shadow: 0 8px 16px rgba(177, 174, 196, 0.8), 0 6px 5px rgb(184, 176, 206);
+            margin-left: 21px;
+        }
+
+        #div3:hover {
+            box-shadow: 0 8px 16px rgba(177, 174, 196, 0.8), 0 6px 5px rgb(184, 176, 206);
+            margin-left: 21px;
+        }
+
+        #div4:hover {
+            box-shadow: 0 8px 16px rgba(177, 174, 196, 0.8), 0 6px 5px rgb(184, 176, 206);
+            margin-left: 21px;
+        }
+
+        #div5:hover {
+            box-shadow: 0 8px 16px rgba(177, 174, 196, 0.8), 0 6px 5px rgb(184, 176, 206);
+            margin-left: 21px;
+        }
+
+        #div6:hover {
+            box-shadow: 0 8px 16px rgba(177, 174, 196, 0.8), 0 6px 5px rgb(184, 176, 206);
+            margin-left: 21px;
+        }
+
+        #div7:hover {
+            box-shadow: 0 8px 16px rgba(177, 174, 196, 0.8), 0 6px 5px rgb(184, 176, 206);
+            margin-left: 21px;
+        }
+
+        #div2 {
+            float: left;
+            width: auto;
+            height: auto;
+            margin-right: 10px;
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+
+        #div3 {
+            float: left;
+            width: auto;
+            height: auto;
+            margin-right: 10px;
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+
+        #div4 {
+            float: left;
+            width: auto;
+            height: auto;
+            margin-right: 10px;
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+
+        #div5 {
+            float: left;
+            width: auto;
+            height: auto;
+            margin-right: 10px;
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+
+        #div6 {
+            float: left;
+            width: auto;
+            height: auto;
+            margin-right: 10px;
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+        }
+
+        #div7 {
+            float: left;
+            width: auto;
+            height: auto;
+            margin-right: 10px;
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+
+        .head {
+            width: 120%;
+            height: 17%;
+            background-color: rgb(226, 153, 43);
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+
+
+        }
+
+        .subdivI {
+            max-width: 900px;
+            height: 265px;
+            border: 3px;
+            border-color: silver;
+            margin-left: 10%;
+            margin-top: 30px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            display: flex;
+            margin-right: 3%;
+            margin-bottom: 0px;
+            overflow-x: scroll;
+            
+            
+        }
+        .subdivI::-webkit-scrollbar{
+            width: 0px;
+        }
+
+        @media screen and (max-width: 800px) {
+            .subdivI {
+                max-width: 340px;
+                height: 270px;
+                border: 3px;
+                border-color: silver;
+                margin-left: 0px;
+                margin-top: 30px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 0px;
+                display: flex;
+                margin-right: 0px;
+                margin-bottom: 0px;
+                overflow-x: scroll;
+
+            }
+
+            #form {
+                margin-left: 0%;
+            }
+
+            #main {
+                display: block;
+            }
+
+        }
+
+        @media screen and (max-width: 360px; ) {
+            .subdivI {}
+        }
+
+
+        #btn {
+            width: 100%;
+            color: rgb(250, 250, 253);
+            background-color: orange;
+            border: none;
+            font-size: xx-small;
+            height: 30px;
+            cursor: pointer;
+            font-weight: 50;
+            border-radius: 4px;
+        }
+
+        #btn:focus {
+            border: solid dodgerblue;
+        }
+
+        #a {
+            margin: 0px;
+            padding: 0px;
+            background-color: white;
+        }
+    </style>
+    <script>
+        function item(name, price, id) {
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div class='subdivI'>
+        <!-- <div class='head'>MAJESTY</div> -->
+        <div id='div1'>
+            <form action='base.php'>
+                <a id='a' href='details.php'>
+                    <img src='font/lap5.jpg' width='120' height='120'>
+                </a><br>
+                <font size='1'>{$name}</font><br>
+                <font size='2' color='black' face='candara'><b>GH&#8373;676.00</b></font><br>
+                <i style='font-size:24px; color:rgb(226, 153, 43); margin-top: 10px' class='far'>&#xf004;</i><br>
+                <button onclick='myFunction()' id='btn' type='submit' name=''>ADD TO CART</button>
+            </form>
+        </div>
+
+        <div id='div2'>
+            <a id='a' href='#' download='font/lap2.jpg'><img src='font/lap2.jpg' width='120' height='120'></a>
+            <br><b>Item name</b><br>
+            <font size='2' color='black' face='candara'>GH&#8373;676.00</font><br>
+            <i style='font-size:24px; color:rgb(226, 153, 43); margin-top: 10px' class='far'>&#xf004;</i><br>
+            <button onclick='myFunction()' ng-click='count=count+1' id='btn' type='submit'>ADD TO CART</button>
+        </div>
+
+        <div id='div3'>
+            <a id='a' href='base.php'><img src='font/shoe1.jpg' width='120' height='120'></a>
+            <br><b>Item name</b><br>
+            <font size='2' color='black' face='candara'>GH&#8373;676.00</font><br>
+            <i style='font-size:24px; color:rgb(226, 153, 43); margin-top: 10px' class='far'>&#xf004;</i><br>
+            <button onclick='myFunction()' id='btn' type='submit'>ADD TO CART</button>
+        </div>
+
+        <div id='div4'>
+            <a id='a' href='base.php'><img src='font/shoe2.jpg' width='120' height='120'></a>
+            <br><b>Item name</b><br>
+            <font size='2' color='black' face='candara'>GH&#8373;676.00</font><br>
+            <i style='font-size:24px; color:rgb(226, 153, 43); margin-top: 10px' class='far'>&#xf004;</i><br>
+
+            <button onclick='myFunction()' id='btn' type='submit'>ADD TO CART</button>
+        </div>
+
+        <div id='div5'>
+            <a id='a' href='base.php'><img src='font/shoe3.jpg' width='120' height='120'></a>
+            <br><b>Item name</b><br>
+            <font size='2' color='black' face='candara'>GH&#8373;676.00</font><br>
+            <i style='font-size:24px; color:rgb(226, 153, 43); margin-top: 10px' class='far'>&#xf004;</i><br>
+            <button onclick='myFunction()' id='btn' type='submit'>ADD TO CART</button>
+        </div>
+
+        <div id='div6'>
+            <a id='a' href='base.php'><img src='font/top1.jpg' width='120' height='120'></a>
+            <br><b>Item name</b><br>
+            <font size='2' color='black' face='candara'>GH&#8373;676.00</font><br>
+            <i style='font-size:24px; color:rgb(226, 153, 43); margin-top: 10px' class='far'>&#xf004;</i><br>
+            <button onclick='myFunction()' id='btn' type='submit'>ADD TO CART</button>
+        </div>
+
+        <div id='div6'>
+            <a id='a' href='base.php'><img src='font/top1.jpg' width='120' height='120'></a>
+            <br><b>Item name</b><br>
+            <font size='2' color='black' face='candara'>GH&#8373;676.00</font><br>
+            <i style='font-size:24px; color:rgb(226, 153, 43); margin-top: 10px' class='far'>&#xf004;</i><br>
+            <button onclick='myFunction()' id='btn' type='submit'>ADD TO CART</button>
+        </div>
+
+
+        <div id='div6'>
+            <a id='a' href='base.php'><img src='font/top1.jpg' width='120' height='120'></a>
+            <br><b>Item name</b><br>
+            <font size='2' color='black' face='candara'>GH&#8373;676.00</font><br>
+            <i style='font-size:24px; color:rgb(226, 153, 43); margin-top: 10px' class='far'>&#xf004;</i><br>
+            <button onclick='myFunction()' id='btn' type='submit'>ADD TO CART</button>
+        </div>
+
+        <div id='div6'>
+            <a id='a' href='base.php'><img src='font/top1.jpg' width='120' height='120'></a>
+            <br><b>Item name</b><br>
+            <font size='2' color='black' face='candara'>GH&#8373;676.00</font><br>
+            <i style='font-size:24px; color:rgb(226, 153, 43); margin-top: 10px' class='far'>&#xf004;</i><br>
+            <button onclick='myFunction()' id='btn' type='submit'>ADD TO CART</button>
+        </div>
+
+        <div id='div6'>
+            <a id='a' href='base.php'><img src='font/top1.jpg' width='120' height='120'></a>
+            <br><b>Item name</b><br>
+            <font size='2' color='black' face='candara'>GH&#8373;676.00</font><br>
+            <i style='font-size:24px; color:rgb(226, 153, 43); margin-top: 10px' class='far'>&#xf004;</i><br>
+            <button onclick='myFunction()' id='btn' type='submit'>ADD TO CART</button>
+        </div>
+
+
+        
+
+    </div>
+
+
+</body>
+
+</html>

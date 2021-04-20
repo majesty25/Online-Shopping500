@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #sidebar{
+            width: 14%;
+            height: auto;
+            background-color: rgb(255, 255, 255, 0.8);
+            position: fixed;
+            top: 12%;
+            left: 2%;
+            color: rgb(255, 136, 0);
+            font-size: x-small;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0px;
+            border-radius: 8px;
+             <!-- box-shadow: 0px 0px 6px rgba(190, 184, 243), 0 4px 10px rgba(188, 169, 241); -->
+        }
+         #sidebar1{
+         width: 14%;
+         height: auto;
+         background-color: rgb(255, 255, 255, 0.8);
+         position: fixed;
+         top: 53%;
+         left: 2%;
+         color: rgb(255, 145, 0);
+         font-size: x-small;
+         font-family: Arial, Helvetica, sans-serif;
+         padding: 0px;
+         border-radius: 8px;
+         
+         }
+          #sidebar2{
+          width: 290px;
+          height: auto;
+          background-color: rgba(255, 255, 255);
+          position: fixed;
+          top: 55%;
+          left: -2005%;
+          color: orange;
+          font-size: x-small;
+          font-family: Arial, Helvetica, sans-serif;
+          padding: 0px;
+          border-radius: 12px;
+          transition: 0.3s;
+           box-shadow: 0px 0px 6px rgba(190, 184, 243), 0 4px 10px rgba(188, 169, 241);
+          
+          }
+          #close{
+              font-size: 40px;
+              float: right;
+              cursor: pointer;
+              color: red;
+          }
+          #head1{
+              width: 100%;
+              height: auto;
+              padding: 10px;
+              background-color: rgb(19, 9, 110, 0.9);
+              margin-top: 0px;
+              border-top-left-radius: 8px;
+              border-top-right-radius: 8px;
+              padding-left: 40px;
+          }
+          #cmmt{
+              margin-top: 7px;
+              margin-left: 10px;
+          }
+          #sub{
+              margin-left: 10px;
+              margin-bottom: 10px;
+              margin-top: 10px;
+              background-color: orange;
+              border-radius: 8px;
+              color: white;
+              font-size: x-small;
+              font-stretch: expanded;
+          }
+
+          #mail{
+              width: 200px;
+              height: 30px;
+              border: solid 2px;
+              color: black;
+              background-color: rgba(255, 255, 255, 0.5);
+              border-radius: 5px;
+          }
+
+          #maillabel{
+              margin-left: 10px;
+              color: rgb(255, 6, 6);
+              font-size: 19px;
+          }
+    </style>
+</head>
+<body>
+   <div id="sidebar">
+        <h4 id="head1" style="color: white; margin-bottom: -10;">CATEGORIES</h4>
+       <ul	style="list-style-type: circle;">          
+           <!-- <li><a style="color: orange;" href="base.php"> <i class='fas fa-house-user'></i> Home</a></li> -->
+           <li><a style="color: orange;" href="itemset2.php"><i class='fas fa-tshirt'></i> Fassion </a></li>
+           <li> <a style="color: orange;" href="itemset3.php"><i class='fas fa-desktop'></i> Computers</a></li>
+           <li> <a style="color: orange;" href="itemset4.php"><i class='fas fa-mobile-alt'></i> Phone</a></li>
+           <li> <a style="color: orange;" href="itemset2.php"><i class='fas fa-bolt'></i> Electronics</a></li>
+           <li> <a style="color: orange;" href="itemset2.php"><i class='fas fa-utensils'></i> Utensils</a></li>
+           <!-- <li> <a style="color: orange;" href="itemset2.php"><i class='fas fa-eye'></i> View carts</a></li> -->
+           <!-- <li> <a href="itemset2.php">Games</a></li> -->
+       </ul>
+   </div>
+   
+   <div id="sidebar1">
+        <h4 id="head1" style="color: white; margin-bottom: -10;">ACTIVITIES</h4>
+     <ul>
+            <li><a style="color: orange" href="base.php"> <i class='fas fa-house-user'></i> Home</a></li>
+            <li><a style="color: orange" href="base.php"> <i class='far fa-user'></i> Account</a></li>
+            <li> <a style="color: orange; px" href="itemset2.php"><i class='fas fa-shopping-cart'></i> View carts</a></li>
+            <li> <a style='px; color: orange' href="#"><i class='fas fa-envelope'></i> Contact us</li></a>
+            <li> <a style='px; color: orange' href="#"><i class='fas fa-comment'></i> Live chat</li></a>
+            <!-- <li> <a style='px; color: orange' href="#"><i class='fab fa-facebook-f'></i> Follow us</li></a> -->
+            <li> <a onclick="show()" style='px; color: orange' href="#"><i class='far fa-comment-alt'></i> Comments</li></a>
+     </ul>
+   </div>
+<div id="sidebar2">
+    <span onclick="move()" id="close">&times;</span>
+    <span>
+        <textarea name="comment" id="cmmt" cols="33" rows="6" placeholder='Enter your comment here...'></textarea>
+        <label id="maillabel" for="email">Email: </label> <input type="email" name="email" id="mail" required><br><br><br>
+        <input id="sub" type="submit" value="Submit comment">
+    </span>
+</div>
+   <script>
+       function show(){
+           document.getElementById('sidebar2').style.left='25%';
+       }
+
+       function move(){
+           document.getElementById('sidebar2').style.left='-30%';
+       }
+   </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0%;
+            position: fixed;
+            z-index: 1;
+            top: 0px;
+            left: 0;
+            background-color: rgb(253, 243, 243);
+            overflow-x: hidden;
+            transition: 0.2s;
+            padding-top: 30px;
+            font-size: 20px;
+          box-shadow: 0px 0px 6px rgba(190, 184, 243), 0 4px 10px rgba(188, 169, 241);
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            color: rgb(207, 28, 28);
+        }
+
+        #main {
+            transition: 0.1s;
+            padding: 16px;
+            display: none;
+            
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 17px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul style="color: orange; margin-top: -20;">
+            <h4 style="color: rgb(207, 28, 28); margin-bottom: -10;">CATEGORIES</h4>
+            <li><a style="color: orange; font-size: 17px" href="#"><i class='fas fa-tshirt'></i> Fassion </a></li>
+            <li> <a style="color: orange; font-size: 17px" href="#"><i class='fas fa-desktop'></i> Computers</a></li>
+            <li> <a style="color: orange; font-size: 17px" href="#"><i class='fas fa-mobile-alt'></i>  Phone</a></li>
+            <li> <a style="color: orange; font-size: 17px" href="#"><i class='fas fa-bolt'></i> Electronics</a></li>
+            <li> <a style="color: orange; font-size: 17px" href="#"><i class='fas fa-utensils'></i> Utensils</a></li>
+            <!-- <li> <a style="color: orange; font-size: 17px" href="itemset2.php"><i class='fas fa-eye'></i> View carts</a></li> -->
+        </ul> 
+        <hr color="orange" style="width: 80%; height: 3px">
+         
+        <ul style="color: orange;">
+            <h4 style="color: rgb(207, 28, 28); margin-bottom: -10;">ACTIVITIES</h4>
+            <li><a style="color: orange; font-size: 17px" href="base.php"> <i class='fas fa-house-user'></i> Home</a></li>
+            <li> <a style="color: orange; font-size: 17px" href="itemset2.php"><i class='fas fa-shopping-cart'></i> View carts</a></li>
+            <li> <a style='font-size:17px; color: orange' href="#"><i class='fas fa-envelope'></i> Contact us</li></a>
+            <li> <a style='font-size:17px; color: orange' href="#"><i class='fas fa-comment'></i> Live chat</li></a>
+            <li> <a style='font-size:17px; color: orange' href="#"><i class='fab fa-facebook-f'></i> Follow us</li></a>
+            <li> <a style='font-size:17px; color: orange' href="#"><i class='far fa-comment-alt'></i> Leave comments</li></a>
+        </ul> 
+    </div>
+
+    <div id="main">
+        
+        <span style="font-size:28px;cursor:pointer; color: rgb(19, 13, 13);
+        left: 5px; top: 32px;position: absolute" onclick="openNav()">&#9776;</span>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "80%";
+            document.getElementById("main").style.marginLeft = "0px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+
+</body>
+
+</html>
